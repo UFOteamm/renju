@@ -1,0 +1,2 @@
+# renju
+a renju AI
