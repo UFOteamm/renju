@@ -1,4 +1,0 @@
-﻿  main.cpp
-D:\code\renju\renju\renju\main.cpp(29,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-D:\code\renju\renju\renju\main.cpp(43,6): warning C4101: “a”: 未引用的局部变量
-  renju.vcxproj -> D:\code\renju\renju\Debug\renju.exe
