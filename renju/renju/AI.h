@@ -2,11 +2,12 @@
 #ifndef AI_H
 #define AI_H
 #include "board.h"
+#include"jsoncpp/json.h"
 class AI
 {
 public:
 	AI(board* myBoard);		//构造函数 
-	void putChess();		//放置棋子 
+	Json::Value putChess();		//放置棋子 
 	void choose();			//产生放置棋子的位置 
 	int first;				//是否先手，1是先手，-1是后手 
 	int chooseX;			//产生放置棋子的X坐标 

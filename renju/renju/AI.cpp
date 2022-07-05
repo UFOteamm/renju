@@ -1,5 +1,5 @@
 #include "AI.h"
-
+#include"jsoncpp/json.h"
 AI::AI(board* myBoard)
 {
 	AIBoard = myBoard;			//棋盘赋值 
@@ -7,19 +7,15 @@ AI::AI(board* myBoard)
 	chooseX = chooseY = 7;		//默认放置在7 
 }
 
-void AI::putChess()
+Json::Value AI::putChess()
 {
-	if (AIBoard->now) return;		//不是AI下时，跳过 
-	if (first == 1 && AIBoard->chess[7][7] == 0)
-	{			//先手第一步直接下中间 
-		AIBoard->chess[7][7] = 1;
-	}
-	else
-	{
+
 		choose();		//选择一个位置 
 		AIBoard->chess[chooseX][chooseY] = first;	//将这个位置放置我们的棋子 
-	}
-	AIBoard->now = !AIBoard->now;		//改变下棋次序的状态 
+		Json::Value ret;
+		ret["x"] = chooseX;
+		ret["y"] = chooseY;
+		return ret;
 }
 
 void AI::choose()
