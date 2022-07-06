@@ -18,5 +18,19 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="board.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="board.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
